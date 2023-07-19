@@ -7,7 +7,7 @@ course = {}
 students = []
 
 # Step 2: Creating a function to add a course.
-def add_course(name, duration, modules, fee):
+'''def add_course(name, duration, modules, fee):
     course['name'] = name                           #Assigns the value of the name parameter to the 'name' key in the course dictionary.
     course['duration'] = duration                   #Assigns the value of the duration parameter to the 'duration' key in the course dictionary.
     course['modules'] = modules                     #Assigns the value of the modules parameter to the 'modules' key in the course dictionary.
@@ -34,4 +34,41 @@ def display_students():
 add_course('Python Programming', '3 months', ['Introduction', 'Advanced Concepts', 'Project'], 500)
 add_student('John Doe', 500)
 display_course()
-display_students()
+display_students()'''
+
+#Another approach:
+'''def add_course_details():
+    name = input("Please enter course name: ")
+    duration = input("Please enter course duration: ")
+    modules = input("Please enter course modules: ")
+    fee = input("Please enter course fee: ")
+    course = {
+        "course_name": name,
+        "course_duration": duration,
+        "course_modules": modules,
+        "course_fee": fee
+    }
+    return course
+
+my_course = add_course_details()
+print(my_course)'''
+
+#Another approach:
+
+def add_course_details(name, duration, modules, fee):
+    course = {}
+    course["course_name"] = name
+    course["course_duration"] = duration
+    course["course_modules"] = modules
+    course["course_fee"] = fee
+    return course
+
+#Reading the details from the user input:
+
+name = input("Please enter course name: ")
+duration = input("Please enter course duration: ")
+modules = input("Please enter course modules: ")
+fee = input("Please enter course fee: ")
+
+my_course = add_course_details(name, duration, modules, fee)
+print(my_course)
